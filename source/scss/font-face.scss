@@ -1,0 +1,94 @@
+//ШРИФТЫ//
+@font-face {
+  font-weight: 400;
+  font-family: "Arsenal";
+  font-style: normal;
+  src: url("../fonts/Arsenal-Regular.woff") format("woff"),
+    url("../fonts/Arsenal-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Arsenal";
+  font-style: normal;
+  src: url("../fonts/Arsenal-Bold.woff") format("woff"),
+    url("../fonts/Arsenal-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+//ИКОНОЧНЫЕ ШРИФТЫ//
+@font-face {
+  font-weight: normal;
+  font-family: "fontawesome";
+  font-style: normal;
+  src: url("../fonts/fontawesome.eot?56501117");
+  src: url("../fonts/fontawesome.eot?56501117#iefix")
+      format("embedded-opentype"),
+    url("../fonts/fontawesome.woff2?56501117") format("woff2"),
+    url("../fonts/fontawesome.woff?56501117") format("woff"),
+    url("../fonts/fontawesome.ttf?56501117") format("truetype"),
+    url("../fonts/fontawesome.svg?56501117#fontawesome") format("svg");
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontawesome';
+    src: url('../font/fontawesome.svg?56501117#fontawesome') format('svg');
+  }
+}
+*/
+[class^="icon-"]::before,
+[class*="icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+
+  /* Animation center compensation - margins should be symmetric */
+
+  /* remove if not needed */
+  margin-left: 0.2em;
+  font-weight: normal;
+  font-family: "fontawesome";
+  font-style: normal;
+
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes */
+  font-variant: normal;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  speak: never;
+
+  /* you can be more comfortable with increased icons size */
+
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-git::before {
+  content: "\f09b";
+} /* '' */
+.icon-vk::before {
+  content: "\f189";
+} /* '' */
+.icon-wh::before {
+  content: "\f232";
+} /* '' */
+.icon-tm::before {
+  content: "\f2c6";
+} /* '' */

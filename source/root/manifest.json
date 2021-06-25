@@ -1,0 +1,9 @@
+{
+  "name": "сайт",
+  "short_name": "сайт",
+  "theme_color": "#cc5803",
+  "background_color": "#cc5803",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}
