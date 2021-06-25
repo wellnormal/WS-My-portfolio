@@ -14,7 +14,8 @@
   "dependencies": {
     "concurrently": "^6.2.0",
     "jquery": "^3.6.0",
-    "picturefill": "^3.0.3"
+    "picturefill": "^3.0.3",
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
