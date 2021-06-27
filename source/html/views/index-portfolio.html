@@ -7,7 +7,7 @@
     <!-- Чтобы телефон и почта на Ios не были ссылками -->
     <meta name="description" content="описание" />
     <!-- Краткое описание (или аннотация) -->
-    <title>Skills</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="/vendors/normalize-css/normalize.min.css" />
     <script>
       if (!window.HTMLPictureElement) {
@@ -16,15 +16,13 @@
     </script>
   </head>
   <body>
-
     <!--header.html-->
     <%= _.template(require('../includes/common/header.html').default)({version:
     htmlWebpackPlugin.options.custom.version,}) %>
 
     <main>
-      <!--index/skills.html-->
-      <%= _.template(require('../includes/index/skills.html').default)({}) %>
+      <!--index/portfolio.html-->
+      <%= _.template(require('../includes/index/portfolio.html').default)({}) %>
     </main>
-    
   </body>
 </html>

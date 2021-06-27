@@ -145,7 +145,7 @@
 }
 
 //?КНОПКА БУРГЕР
-#menu-toggle {
+.header__burger {
   position: fixed;
   top: 25px;
   left: 15vw;
@@ -166,7 +166,7 @@
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  #hamburger {
+  .burger-item {
     position: absolute;
     width: 0%;
     span {
@@ -195,10 +195,10 @@
     }
   }
 }
-#menu-toggle.open {
+.header__burger.open {
   left: 25px;
   transform: translateX(0);
-  #hamburger {
+  .burger-item {
     width: 100%;
     height: 100%;
     span {
