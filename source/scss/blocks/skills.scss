@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -12,10 +13,10 @@
     width: 100%;
     max-width: $xl;
     height: 100%;
-    background: #222;
   }
 
   &__title {
+    margin: 0 auto 20px;
     color: white;
     font-size: 60px;
     letter-spacing: 2px;
@@ -86,4 +87,22 @@
 
 .js-tilt-glare {
   border-radius: 15px;
+}
+
+.slider {
+  display: block;
+  width: 1000px;
+  margin-top: 50px;
+  &__card {
+    height: 80px;
+    overflow: hidden;
+  }
+  &__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.slick-slide {
+  margin: 0 20px;
 }

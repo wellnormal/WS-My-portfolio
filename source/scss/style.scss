@@ -4,6 +4,7 @@
  должны быть на странице.
 */
 
+@import "~slick-carousel/slick/slick.scss";
 @import "font-face";
 @import "variables";
 @import "global";
@@ -11,3 +12,4 @@
 @import "blocks/header";
 @import "blocks/about";
 @import "blocks/skills";
+@import "blocks/portfolio";

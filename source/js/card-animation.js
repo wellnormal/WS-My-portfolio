@@ -1,3 +1,4 @@
+import VanillaTilt from 'vanilla-tilt';
 VanillaTilt.init(document.querySelectorAll(".skills__card"), {
   max: 25,
   speed: 400,
