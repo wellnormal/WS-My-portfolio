@@ -55,12 +55,19 @@
   }
 }
 .site {
+  position: relative;
+  right: 0;
   display: flex;
-  margin-left: 30px;
+  &__decor {
+    position: absolute;
+    width: 575px;
+    height: 700px;
+    box-shadow: 7px 7px 10px #070707, -1px -1px 1px #1d1d1d;
+  }
   &__item {
     position: relative;
-    width: 400px;
-    height: 600px;
+    width: 575px;
+    height: 700px;
     overflow: hidden;
   }
   &__item img {
@@ -70,8 +77,4 @@
     height: 100%;
     object-fit: contain;
   }
-}
-.flowers {
-}
-.portf {
 }
