@@ -1,25 +1,31 @@
 .skills {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  background: #222;
+
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: $xl;
-    height: 100%;
+    height: 100vh;
   }
 
   &__title {
-    margin: 0 auto 20px;
+    position: relative;
+    margin: 0;
+    margin-bottom: 30px;
     color: white;
-    font-size: 60px;
+    font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
     letter-spacing: 2px;
+    text-align: center;
     text-transform: uppercase;
   }
 
@@ -36,9 +42,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 280px;
-    height: 400px;
-    margin: 30px;
+    width: 260px;
+    height: 350px;
+    margin: 10px 30px 30px;
     background: rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -53,6 +59,9 @@
     text-align: center;
     transition: 0.5s;
   }
+  &__content:hover {
+    transform: translateZ(80px);
+  }
 
   &__content-number {
     position: absolute;
@@ -61,25 +70,19 @@
     margin: 0;
     color: rgba(255, 255, 255, 0.05);
     font-size: 100px;
-    transform: translateZ(50px);
   }
-
   &__content-title {
     margin: 20px auto 0;
     color: #fff;
     font-size: 30px;
-    transform: translateZ(80px);
   }
-
   &__content-list {
     padding: 20px;
     text-align: left;
-    transform: translateZ(60px);
   }
-
   &__content-item {
     color: #fff;
-    font-size: 24px;
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1280 - 320)));
     letter-spacing: 1.2px;
     list-style: disc;
   }
@@ -91,10 +94,10 @@
 
 .slider {
   display: block;
-  width: 1000px;
-  margin-top: 50px;
+  width: 90%;
+  margin: 20px auto 0;
   &__card {
-    height: 80px;
+    height: 60px;
     overflow: hidden;
   }
   &__card img {
@@ -105,4 +108,84 @@
 }
 .slick-slide {
   margin: 0 20px;
+}
+
+//* ДЛЯ ЭКРАНОВ < 1919px
+@media (max-width: $el) {
+  .skills {
+    &__inner {
+      max-width: 850px;
+    }
+    &__card {
+      width: 210px;
+      height: 300px;
+      margin: 10px;
+    }
+    &__content-number {
+      font-size: 80px;
+    }
+    &__content-title {
+      font-size: 20px;
+    }
+    &__content-item {
+      font-size: calc(12px + 2 * ((100vw - 320px) / (1280 - 320)));
+    }
+  }
+  .slider {
+    &__card {
+      height: 40px;
+    }
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 1399px
+@media (max-width: $xxl) {
+  .skills {
+    &__title {
+      margin: 30px 0 30px;
+    }
+    &__inner {
+      max-width: $sm;
+      height: 100%;
+    }
+    &__content-number {
+      font-size: 80px;
+    }
+    &__content-title {
+      font-size: 20px;
+    }
+    &__content-item {
+      font-size: calc(12px + 2 * ((100vw - 320px) / (1280 - 320)));
+    }
+  }
+  .slider {
+    margin-bottom: 30px;
+    &__card {
+      height: 40px;
+    }
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 991px
+@media (max-width: $lg) {
+  .skills {
+    &__inner {
+      height: 100%;
+    }
+    &__title {
+      margin: 100px 0;
+    }
+    &__card {
+      margin: 15px;
+    }
+    &__container {
+      margin-bottom: 75px;
+    }
+  }
+
+  .slider {
+    position: absolute;
+    top: 150px;
+    width: 90%;
+  }
 }

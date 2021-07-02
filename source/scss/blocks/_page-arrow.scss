@@ -20,7 +20,7 @@
 }
 .prev-bot {
   position: fixed;
-  right: 36px;
+  right: 0;
   bottom: 0;
   width: 240px;
   height: 50%;
@@ -28,7 +28,7 @@
 .prev {
   position: fixed;
   top: 25%;
-  right: 36px;
+  right: 0;
   width: 240px;
   height: 50%;
 }
@@ -61,7 +61,7 @@
 .prev-arrow {
   position: absolute;
   top: calc(50% - 18.5px);
-  left: calc(50% - 18px);
+  left: calc(50% - 36px);
   display: block;
   width: 36px;
   height: 36px;
@@ -154,6 +154,43 @@
   transform: rotate(150deg);
 }
 
+//* ДЛЯ ЭКРАНОВ < 1919px
+@media (max-width: $el) {
+  .next-text {
+    top: calc(50% - 12px);
+    right: calc(30% + 5px);
+    font-size: 18px;
+  }
+  .next-arrow {
+    left: calc(70% - 18px);
+  }
+  .prev-arrow {
+    left: calc(70% - 36px);
+  }
+}
+
+// * ДЛЯ ЭКРАНОВ < 1399px
+@media (max-width: $xxl) {
+  .next,
+  .next-top,
+  .prev,
+  .prev-bot {
+    width: 150px;
+  }
+  .next-text {
+    top: calc(50% - 8px);
+    right: calc(10% + 36px);
+    font-size: 14px;
+  }
+  .next-arrow {
+    left: calc(50% - 18px);
+  }
+  .prev-arrow {
+    left: calc(50% - 36px);
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 991px
 @media (max-width: $lg) {
   .page-control {
     display: none;

@@ -1,17 +1,19 @@
 .portfolio {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  background: #222;
   &__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     max-width: $xl;
-    height: 100%;
+    height: 100vh;
   }
 
   &__title {
@@ -19,12 +21,13 @@
     top: 7%;
     margin: 0;
     color: white;
-    font-size: 60px;
+    font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
     letter-spacing: 2px;
     text-transform: uppercase;
   }
 
   &__content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,9 +35,11 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 20px;
   }
 
   &__item {
@@ -55,26 +60,99 @@
   }
 }
 .site {
-  position: relative;
+  position: absolute;
+  top: -50%;
   right: 0;
-  display: flex;
-  &__decor {
-    position: absolute;
-    width: 575px;
-    height: 700px;
-    box-shadow: 7px 7px 10px #070707, -1px -1px 1px #1d1d1d;
-  }
+  width: 500px;
+  height: 600px;
+
   &__item {
     position: relative;
-    width: 575px;
-    height: 700px;
-    overflow: hidden;
-  }
-  &__item img {
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    overflow: hidden;
+  }
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 7px 7px 10px #070707;
+    content: "";
+  }
+  &__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 1919px
+@media (max-width: $el) {
+  .portfolio {
+    &__inner {
+      max-width: 850px;
+    }
+  }
+  .site {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    width: 300px;
+    height: 400px;
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 1399px
+@media (max-width: $xxl) {
+  .portfolio {
+    &__inner {
+      max-width: $sm;
+    }
+    &__item {
+      margin: 20px 0;
+      font-size: 30px;
+    }
+  }
+  .site {
+    top: -60%;
+    width: 200px;
+    height: 300px;
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 991px
+@media (max-width: $lg) {
+  .portfolio {
+    &__inner {
+      display: block;
+      height: 100%;
+    }
+    &__title {
+      position: relative;
+      top: 0;
+      margin: 100px 0 50px;
+      text-align: center;
+    }
+    &__content {
+      position: relative;
+      display: block;
+      padding-bottom: 60px;
+    }
+    &__list {
+      display: inline;
+      text-align: center;
+    }
+    &__item {
+      margin: 15px 10px;
+      font-size: calc(20px + 15 * ((100vw - 320px) / (1280 - 320)));
+    }
+  }
+  .site {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    &__item {
+      position: relative;
+    }
   }
 }

@@ -1,4 +1,4 @@
-if ($('main').hasClass('about')) {
+if ($('main').hasClass('about-main')) {
   // let image = document.getElementById("image");
   let popup = document.querySelector('.about__name');
   let list = document.querySelector('.foto__item');
