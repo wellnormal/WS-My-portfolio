@@ -14,11 +14,11 @@
     height: 100vh;
     background-color: transparent;
     border-radius: 15px;
-    box-shadow: 7px 7px 10px #070707, -7px -7px 10px #1d1d1d;
-    transition: 0.5s ease-out;
+    box-shadow: 7px 7px 10px #070707;
+    transition: all 0.3s ease 0s;
     &.active {
       left: -110%;
-      transition: 0.5s ease-out;
+      transition: all 0.3s ease 0s;
     }
   }
   &__body::before {
@@ -30,6 +30,7 @@
     background: #111;
     content: "";
   }
+
   &__mail {
     margin-bottom: 50px;
   }
@@ -50,7 +51,6 @@
 //?ИКОНКИ СОЦ.СЕТЕЙ
 .social {
   &__list {
-    // margin-bottom: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -243,7 +243,7 @@
     z-index: 1;
     display: block;
     margin: 0;
-    color: #fff;
+    color: #0ff;
     font-weight: 700;
     font-size: 25px;
     line-height: 60px;
@@ -440,8 +440,8 @@
       width: 100%;
       border: none;
       border-radius: 0;
+      box-shadow: none;
       backdrop-filter: blur(5px);
-
       &.active {
         left: 0;
       }
@@ -450,6 +450,7 @@
       bottom: 0;
     }
     &__mail-item {
+      color: $red;
       font-size: calc(16px + 2 * ((100vw - 575px) / (991 - 575)));
     }
   }
@@ -470,14 +471,26 @@
       height: 40px;
       line-height: 36px;
       text-align: center;
+      background: #222;
     }
     &__link:hover {
       transform: translateY(-10px);
     }
+
+    &__link::after {
+      display: none;
+    }
   }
+
   .nav {
     &__item {
       padding: 20px 10px;
+    }
+    &__link .decor {
+      display: none;
+    }
+    &__link::after {
+      display: none;
     }
   }
   [class^="icon-"]::before,
@@ -509,6 +522,15 @@
         background: $red;
         box-shadow: none;
       }
+    }
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 575px
+@media (max-width: $sm) {
+  .header {
+    &__mail {
+      margin-bottom: 70px;
     }
   }
 }

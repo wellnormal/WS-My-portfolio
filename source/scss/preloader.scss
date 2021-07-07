@@ -1,0 +1,42 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #222;
+}
+.preloader__loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 100%;
+  margin: auto;
+  color: #0ff;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff,
+    0 0 40px rgba(0, 15, 15, 0), 0 0 70px rgba(0, 255, 255, 0),
+    0 0 80px rgba(0, 255, 255, 0), 0 0 100px rgba(0, 255, 255, 0);
+  animation: load 1.2s infinite 0s ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes load {
+  0% {
+    letter-spacing: 6px;
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

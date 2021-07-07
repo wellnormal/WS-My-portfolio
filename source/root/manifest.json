@@ -1,9 +1,6 @@
 {
-  "name": "сайт",
-  "short_name": "сайт",
-  "theme_color": "#cc5803",
-  "background_color": "#cc5803",
-  "display": "browser",
-  "scope": "/",
-  "start_url": "/"
+  "name": "SergWeb - разработка сайтов",
+  "short_name": "SergWeb",
+  "theme_color": "#222",
+  "background_color": "#222"
 }

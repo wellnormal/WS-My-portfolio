@@ -28,6 +28,10 @@
   &__subtitle {
     margin: 0 0 40px;
     font-size: calc(18px + 12 * ((100vw - 320px) / (1280 - 320)));
+    animation: 1s fadeInDown 1s;
+  }
+  &__title {
+    animation: 1s fadeInDown 1s;
   }
 
   &__title-text {
@@ -63,6 +67,7 @@
     color: rgba(255, 255, 255, 0.6);
     font-size: calc(14px + 4 * ((100vw - 320px) / (1280 - 320)));
     line-height: 30px;
+    animation: 1s fadeInUp 0.9s;
   }
   &__text:nth-child(2) {
     margin: 10px 0 0;
@@ -166,5 +171,21 @@
   }
   .foto {
     display: none;
+  }
+}
+
+//* ДЛЯ ЭКРАНОВ < 575px
+@media (max-width: $sm) {
+  .about {
+    &__title-text {
+      font-size: calc(18px + 6 * ((100vw - 320px) / (575 - 320)));
+    }
+    &__subtitle {
+      margin-bottom: 20px;
+      font-size: calc(16px + 12 * ((100vw - 320px) / (575 - 320)));
+    }
+    &__name {
+      font-size: calc(16px + 12 * ((100vw - 320px) / (575 - 320)));
+    }
   }
 }
